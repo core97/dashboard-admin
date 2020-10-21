@@ -2,7 +2,8 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@components/*": ["common/components/*"]
+      "@components/*": ["common/components/*"],
+      "@hooks/*": ["common/hooks/*"],
     },
     "target": "ES6",
     "lib": ["dom", "dom.iterable", "esnext"],

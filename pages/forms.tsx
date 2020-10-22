@@ -2,6 +2,7 @@ import { SyntheticEvent } from "react";
 import { useForm } from "react-hook-form";
 import { Select } from "@components/Select";
 import { Textfield } from "@components/Textfield";
+import { Banner } from '@components/Banner';
 
 type FormExample = {
   email: string;
@@ -39,6 +40,7 @@ export default function Forms(): React.ReactNode {
       <h2 className="mt-6 mb-8 text-2xl font-semibold text-gray-700">
         Formularios
       </h2>
+      <Banner routeHref="/" content="Empieza tu proyecto con este panel" callToAction="Ver más"/>
       <h4 className="mb-4 text-lg font-semibold text-gray-600">Elementos</h4>
       <div className="px-4 py-3 mb-8 bg-white rounded-lg shadow-md">
         <form className="block" onSubmit={handleSubmit(onSubmit)}>

@@ -1,4 +1,5 @@
 export const routes = {
     home: '/',
-    forms: '/forms'
+    forms: '/forms',
+    cards: '/cards'
 }

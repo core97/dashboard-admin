@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { AiOutlineHome } from "react-icons/ai";
 import { FaWpforms } from "react-icons/fa";
-import { BsCloudUpload } from "react-icons/bs";
+import { BsCardText } from "react-icons/bs";
 import { RiPagesLine } from "react-icons/ri";
 import { SidebarItem } from "@components/SidebarItem";
 import { SidebarItemDropdown } from "@components/SidebarItemDropdown";
@@ -41,9 +41,9 @@ export const SidebarMobile = () => {
               text="Forms"
             />
             <SidebarItem
-              routeHref="/pepe"
-              icon={<BsCloudUpload size="20" />}
-              text="Upload"
+              routeHref={routes.cards}
+              icon={<BsCardText size="20" />}
+              text="Cards"
             />
             {/* Dropdown item */}
             <SidebarItemDropdown

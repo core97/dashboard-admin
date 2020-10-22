@@ -4,6 +4,7 @@
     "paths": {
       "@components/*": ["common/components/*"],
       "@hooks/*": ["common/hooks/*"],
+      "@routes": ["routes/index.ts"]
     },
     "target": "ES6",
     "lib": ["dom", "dom.iterable", "esnext"],
@@ -19,6 +20,12 @@
     "isolatedModules": true,
     "jsx": "preserve"
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "tailwind.config.js", "postcss.config.js"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "tailwind.config.js",
+    "postcss.config.js"
+  ],
   "exclude": ["node_modules"]
 }

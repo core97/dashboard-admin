@@ -5,6 +5,7 @@ import { BsCloudUpload } from "react-icons/bs";
 import { RiPagesLine } from "react-icons/ri";
 import { SidebarItem } from "@components/SidebarItem";
 import { SidebarItemDropdown } from "@components/SidebarItemDropdown";
+import { routes } from '@routes';
 
 const dropdownItems = [
   {
@@ -28,12 +29,12 @@ export const SidebarDesktop = () => {
         {/* Sidebar items */}
         <ul className="mt-6">
           <SidebarItem
-            routeHref="/"
+            routeHref={routes.home}
             icon={<AiOutlineHome size="20" />}
             text="Dashboard"
           />
           <SidebarItem
-            routeHref="/pepe"
+            routeHref={routes.forms}
             icon={<FaWpforms size="20" />}
             text="Forms"
           />

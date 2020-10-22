@@ -1,10 +1,3 @@
-/* future: {
-  removeDeprecatedGapUtilities: true,
-  purgeLayersByDefault: true,
-  defaultLineHeights: true,
-  standardFontWeights: true,
-} */
-
 module.exports = {
   future: {
     removeDeprecatedGapUtilities: true,

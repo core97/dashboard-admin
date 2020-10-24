@@ -3,6 +3,7 @@ import { AiOutlineHome } from "react-icons/ai";
 import { FaWpforms } from "react-icons/fa";
 import { BsCardText } from "react-icons/bs";
 import { RiPagesLine } from "react-icons/ri";
+import { AiOutlineTable } from 'react-icons/ai';
 import { SidebarItem } from "@components/SidebarItem";
 import { SidebarItemDropdown } from "@components/SidebarItemDropdown";
 import { routes } from "@routes";
@@ -42,6 +43,11 @@ export const SidebarDesktop = () => {
             routeHref={routes.cards}
             icon={<BsCardText size="20" />}
             text="Cards"
+          />
+          <SidebarItem
+            routeHref={routes.tables}
+            icon={<AiOutlineTable size="20" />}
+            text="Tables"
           />
           {/* Dropdown item */}
           <SidebarItemDropdown

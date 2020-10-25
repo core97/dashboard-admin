@@ -4,6 +4,7 @@ import { FaWpforms } from "react-icons/fa";
 import { BsCardText } from "react-icons/bs";
 import { RiPagesLine } from "react-icons/ri";
 import { AiOutlineTable } from 'react-icons/ai';
+import { HiCursorClick } from 'react-icons/hi';
 import { SidebarItem } from "@components/SidebarItem";
 import { SidebarItemDropdown } from "@components/SidebarItemDropdown";
 import { routes } from '@routes';
@@ -50,6 +51,11 @@ export const SidebarMobile = () => {
               routeHref={routes.tables}
               icon={<AiOutlineTable size="20" />}
               text="Tables"
+            />
+            <SidebarItem
+              routeHref={routes.buttons}
+              icon={<HiCursorClick size="20" />}
+              text="Buttons"
             />
             {/* Dropdown item */}
             <SidebarItemDropdown

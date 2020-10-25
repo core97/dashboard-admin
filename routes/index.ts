@@ -3,4 +3,5 @@ export const routes = {
   forms: "/forms",
   cards: "/cards",
   tables: "/tables",
+  buttons: "/buttons",
 };

@@ -400,7 +400,7 @@ const rows = [
   ],
 ];
 
-export default function Home(): React.ReactNode {
+export default function Tables(): React.ReactNode {
   return (
     <>
       <h2 className="my-6 text-2xl font-semibold text-gray-700">Tables</h2>

@@ -5,4 +5,5 @@ export const routes = {
   tables: "/tables",
   buttons: "/buttons",
   modals: "/modals",
+  charts: "/charts",
 };

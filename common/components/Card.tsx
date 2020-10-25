@@ -3,8 +3,9 @@ interface IProps {
   withTitle?: boolean;
   title?: string;
   secondColor?: boolean;
-  content: string;
+  content?: string;
   icon?: React.ReactNode;
+  children?: React.ReactNode;
 }
 
 export const Card = ({
@@ -14,11 +15,16 @@ export const Card = ({
   secondColor,
   content,
   icon,
+  children,
 }: IProps) => {
   if (bigSection) {
     return (
       <div className="px-4 py-3 mb-8 bg-white rounded-lg shadow-md">
-        <p className="text-sm text-gray-600">{content}</p>
+        {children ? (
+          children
+        ) : (
+          <p className="text-sm text-gray-600">{content}</p>
+        )}
       </div>
     );
   }

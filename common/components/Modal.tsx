@@ -8,7 +8,10 @@ export const Modal = () => {
 
   return (
     /* Modal backdrop */
-    <div className="fixed inset-0 z-30 flex items-end bg-black bg-opacity-50 sm:items-center sm:justify-center">
+    <div
+      onClick={closeModal}
+      className="fixed inset-0 z-30 flex items-end bg-black bg-opacity-50 sm:items-center sm:justify-center"
+    >
       {/* Modal */}
       <div className="w-full px-6 py-4 overflow-hidden bg-white rounded-t-lg sm:rounded-lg sm:m-4 sm:max-w-xl">
         <header className="flex justify-end">

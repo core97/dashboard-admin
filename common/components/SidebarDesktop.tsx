@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { AiOutlineHome } from "react-icons/ai";
+import { AiOutlineHome, AiOutlinePieChart } from "react-icons/ai";
 import { FaWpforms } from "react-icons/fa";
 import { BsCardText } from "react-icons/bs";
 import { RiPagesLine } from "react-icons/ri";
@@ -60,6 +60,11 @@ export const SidebarDesktop = () => {
             routeHref={routes.modals}
             icon={<BiWindows size="20" />}
             text="Modals"
+          />
+          <SidebarItem
+            routeHref={routes.charts}
+            icon={<AiOutlinePieChart size="20" />}
+            text="Charts"
           />
           {/* Dropdown item */}
           <SidebarItemDropdown

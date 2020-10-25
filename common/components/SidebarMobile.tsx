@@ -5,6 +5,7 @@ import { BsCardText } from "react-icons/bs";
 import { RiPagesLine } from "react-icons/ri";
 import { AiOutlineTable } from 'react-icons/ai';
 import { HiCursorClick } from 'react-icons/hi';
+import { BiWindows } from 'react-icons/bi';
 import { SidebarItem } from "@components/SidebarItem";
 import { SidebarItemDropdown } from "@components/SidebarItemDropdown";
 import { routes } from '@routes';
@@ -56,6 +57,11 @@ export const SidebarMobile = () => {
               routeHref={routes.buttons}
               icon={<HiCursorClick size="20" />}
               text="Buttons"
+            />
+            <SidebarItem
+              routeHref={routes.modals}
+              icon={<BiWindows size="20" />}
+              text="Modals"
             />
             {/* Dropdown item */}
             <SidebarItemDropdown

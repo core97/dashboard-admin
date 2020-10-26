@@ -1,6 +1,7 @@
 interface IProps {
   textarea?: boolean;
   type?: "email" | "password" | "text" | "number";
+  label?: string;
   placeholder?: string;
   name?: string;
   // TODO: Tipar 'errors' y 'register'
@@ -11,13 +12,19 @@ interface IProps {
 export const Textfield = ({
   textarea,
   type,
-  placeholder,
+  label,
+  placeholder = '',
   name,
   errors,
   register,
 }: IProps) => {
   return (
     <div className="mb-5">
+      {label && (
+        <label className="block text-sm leading-5 font-normal text-gray-700 mb-2">
+          {label}
+        </label>
+      )}
       {!textarea ? (
         <input
           className={`block w-full mt-1 mb-2 bg-white rounded border ${

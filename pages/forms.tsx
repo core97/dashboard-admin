@@ -45,7 +45,8 @@ export default function Forms(): React.ReactNode {
       <div className="px-4 py-3 mb-8 bg-white rounded-lg shadow-md">
         <form className="block" onSubmit={handleSubmit(onSubmit)}>
           <Textfield
-            placeholder="Email"
+            label="Email"
+            placeholder="example@gmail.com"
             type="email"
             name="email"
             errors={errors}
@@ -57,7 +58,7 @@ export default function Forms(): React.ReactNode {
             })}
           />
           <Textfield
-            placeholder="Mensaje"
+            label="Mensaje"
             textarea
             name="message"
             errors={errors}

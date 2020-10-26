@@ -3,12 +3,12 @@ import { AiOutlineHome, AiOutlinePieChart } from "react-icons/ai";
 import { FaWpforms } from "react-icons/fa";
 import { BsCardText } from "react-icons/bs";
 import { RiPagesLine } from "react-icons/ri";
-import { AiOutlineTable } from 'react-icons/ai';
-import { HiCursorClick } from 'react-icons/hi';
-import { BiWindows } from 'react-icons/bi';
+import { AiOutlineTable } from "react-icons/ai";
+import { HiCursorClick } from "react-icons/hi";
+import { BiWindows } from "react-icons/bi";
 import { SidebarItem } from "@components/SidebarItem";
 import { SidebarItemDropdown } from "@components/SidebarItemDropdown";
-import { routes } from '@routes';
+import { routes } from "@routes";
 
 const dropdownItems = [
   {
@@ -21,18 +21,30 @@ const dropdownItems = [
   },
 ];
 
-export const SidebarMobile = () => {
+export const SidebarMobile = ({ isOpenSidebar, closeSidebar }) => {
   return (
     <>
       {/* Backdrop */}
-      <div className="fixed inset-0 z-10 flex items-end bg-black bg-opacity-50 sm:items-center sm:justify-center"></div>
+      <div
+        className={`${
+          isOpenSidebar
+            ? "fixed inset-0 z-10 flex items-end bg-black bg-opacity-50 sm:items-center sm:justify-center"
+            : ""
+        }transition-all duration-200`}
+      ></div>
       {/* Sidebar */}
-      <aside className="fixed inset-y-0 z-20 flex-shrink-0 w-64 mt-16 overflow-y-auto bg-white md:hidden">
+      <aside
+        className={`fixed inset-y-0 z-20 flex-shrink-0 ${
+          isOpenSidebar ? "w-64" : "w-0"
+        } transition-all duration-200 mt-16 overflow-y-auto bg-white md:hidden`}
+      >
         <div className="py-4 text-gray-500">
           <Link href="/">
-            <a className="ml-6 text-lg font-bold text-gray-800">Administrator</a>
+            <a className="ml-6 text-lg font-bold text-gray-800">
+              Administrator
+            </a>
           </Link>
-          <ul className="mt-6">
+          <ul className="mt-6" onClick={closeSidebar}>
             <SidebarItem
               routeHref={routes.home}
               icon={<AiOutlineHome size="20" />}

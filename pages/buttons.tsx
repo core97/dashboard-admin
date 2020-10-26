@@ -12,7 +12,9 @@ export default function Buttons(): React.ReactNode {
         <div className="flex flex-col flex-wrap mb-4 space-y-4 md:flex-row md:items-end md:space-x-4">
           <Button type="extraBig">Extra Big</Button>
           <Button type="big">Big</Button>
-          <Button type="medium" secondary>Medium</Button>
+          <Button type="medium" secondary>
+            Medium
+          </Button>
           <Button type="medium" disabled>
             Disabled
           </Button>

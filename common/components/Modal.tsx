@@ -4,13 +4,13 @@ import { Close as CloseIcon } from "@icons/Close";
 import { ModalContext } from "@contexts/ModalContext";
 
 export const Modal = () => {
-  const { closeModal } = useContext(ModalContext);
+  const { closeModal, isOpenModal } = useContext(ModalContext);
 
   return (
     /* Modal backdrop */
     <div
       onClick={closeModal}
-      className="fixed inset-0 z-30 flex items-end bg-black bg-opacity-50 sm:items-center sm:justify-center"
+      className="animate-opacity fixed inset-0 z-30 flex items-end bg-black bg-opacity-50 sm:items-center sm:justify-center"
     >
       {/* Modal */}
       <div className="w-full px-6 py-4 overflow-hidden bg-white rounded-t-lg sm:rounded-lg sm:m-4 sm:max-w-xl">
@@ -45,10 +45,12 @@ export const Modal = () => {
           </p>
         </div>
         <footer className="flex flex-col items-center justify-end px-6 py-3 -mx-6 -mb-4 space-y-4 sm:space-y-0 sm:space-x-6 sm:flex-row bg-gray-50 dark:bg-gray-800">
-          <Button type="medium" secondary onClick={closeModal}>
+          <Button type="medium" secondary onClick={closeModal} fullWidth>
             Cancel
           </Button>
-          <Button type="medium">Accept</Button>
+          <Button type="medium" fullWidth>
+            Accept
+          </Button>
         </footer>
       </div>
     </div>

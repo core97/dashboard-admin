@@ -10,6 +10,7 @@ interface IProps {
     | "iconCircle";
   disabled?: boolean;
   secondary?: boolean;
+  fullWidth?: boolean;
   icon?: React.ReactNode;
   onClick?(): void;
   children?: React.ReactNode;
@@ -19,17 +20,18 @@ export const Button = ({
   type,
   disabled,
   secondary,
+  fullWidth,
   icon,
   onClick,
   children,
 }: IProps) => {
   if (type === "extraBig")
     return (
-      <div>
+      <div className={`${fullWidth ? "w-full" : ""}`}>
         <button
           disabled={disabled ? true : false}
           onClick={onClick}
-          className={`px-10 py-4 font-medium leading-5 transition-colors duration-150 ${
+          className={`${fullWidth ? "w-full" : ""} px-10 py-4 font-medium leading-5 transition-colors duration-150 ${
             disabled ? "cursor-default" : ""
           } ${
             secondary
@@ -44,11 +46,11 @@ export const Button = ({
 
   if (type === "big")
     return (
-      <div>
+      <div className={`${fullWidth ? "w-full" : ""}`}>
         <button
           disabled={disabled ? true : false}
           onClick={onClick}
-          className={`px-5 py-3 font-medium leading-5 text-white transition-colors duration-150 ${
+          className={`${fullWidth ? "w-full" : ""} px-5 py-3 font-medium leading-5 text-white transition-colors duration-150 ${
             disabled ? "cursor-default" : ""
           } ${
             secondary
@@ -63,11 +65,11 @@ export const Button = ({
 
   if (type === "medium")
     return (
-      <div>
+      <div className={`${fullWidth ? "w-full" : ""}`}>
         <button
           disabled={disabled ? true : false}
           onClick={onClick}
-          className={`px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 ${
+          className={`${fullWidth ? "w-full" : ""} px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 ${
             disabled ? "cursor-default" : ""
           } ${
             secondary
@@ -82,11 +84,11 @@ export const Button = ({
 
   if (type === "small")
     return (
-      <div>
+      <div className={`${fullWidth ? "w-full" : ""}`}>
         <button
           disabled={disabled ? true : false}
           onClick={onClick}
-          className={`px-3 py-1 text-sm font-medium leading-5 text-white transition-colors duration-150 ${
+          className={`${fullWidth ? "w-full" : ""} px-3 py-1 text-sm font-medium leading-5 text-white transition-colors duration-150 ${
             disabled ? "cursor-default" : ""
           } ${
             secondary
@@ -101,11 +103,11 @@ export const Button = ({
 
   if (type === "iconRight")
     return (
-      <div>
+      <div className={`${fullWidth ? "w-full" : ""}`}>
         <button
           disabled={disabled ? true : false}
           onClick={onClick}
-          className={`flex items-center justify-between px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 ${
+          className={`${fullWidth ? "w-full" : ""} flex items-center justify-center px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 ${
             disabled ? "cursor-default" : ""
           } ${
             secondary
@@ -121,11 +123,11 @@ export const Button = ({
 
   if (type === "iconLeft")
     return (
-      <div>
+      <div className={`${fullWidth ? "w-full" : ""}`}>
         <button
           disabled={disabled ? true : false}
           onClick={onClick}
-          className={`flex items-center justify-between px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 ${
+          className={`${fullWidth ? "w-full" : ""} flex items-center justify-center px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 ${
             disabled ? "cursor-default" : ""
           } ${
             secondary

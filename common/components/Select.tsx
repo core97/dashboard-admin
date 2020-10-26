@@ -34,7 +34,7 @@ export const Select = ({ label, defaultValue, options }: IProps) => {
       {label && (
         <label
           id="listbox-label"
-          className="block text-base leading-5 font-medium text-gray-700 mb-3"
+          className="block text-sm leading-5 font-normal text-gray-700 mb-2"
         >
           {label}
         </label>
@@ -78,8 +78,8 @@ export const Select = ({ label, defaultValue, options }: IProps) => {
             >
               {selectOptions.map((eachOption) => (
                 <li
+                  key={eachOption.option}
                   onClick={() => handleClickOption(eachOption)}
-                  id="listbox-item-0"
                   role="option"
                   className="text-gray-900 cursor-default select-none relative py-2 pl-3 pr-9 hover:cursor-pointer hover:bg-gray-100"
                 >

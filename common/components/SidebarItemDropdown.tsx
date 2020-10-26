@@ -29,26 +29,29 @@ export const SidebarItemDropdown = ({ title, titleIcon, items }: IProps) => {
         </span>
         <RiArrowDropDownLine size="26" />
       </button>
-      {isOpenDropdown && (
-        <div>
-          {/* TODO: Animación para abrir dropdown */}
-          <ul
-            className="p-2 mt-2 space-y-2 overflow-hidden text-sm font-medium text-gray-500 rounded-md shadow-inner bg-gray-50"
-            aria-label="submenu"
-          >
-            {items.map((eachItem) => (
-              <li
-                className="px-2 py-1 transition-colors duration-150 hover:text-gray-800"
-                key={eachItem.text}
-              >
-                <Link href={eachItem.routeHref}>
-                  <a className="w-full">{eachItem.text}</a>
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
+
+      <div>
+        {/* TODO: Animación para abrir dropdown */}
+        <ul
+          className={`${
+            isOpenDropdown
+              ? "p-2 mt-2 space-y-2 overflow-hidden text-sm font-medium text-gray-500 rounded-md shadow-inner bg-gray-50"
+              : "h-0 overflow-hidden"
+          } transition-all duration-100`}
+          aria-label="submenu"
+        >
+          {items.map((eachItem) => (
+            <li
+              className="px-2 py-1 transition-colors duration-150 hover:text-gray-800"
+              key={eachItem.text}
+            >
+              <Link href={eachItem.routeHref}>
+                <a className="w-full">{eachItem.text}</a>
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </div>
     </li>
   );
 };

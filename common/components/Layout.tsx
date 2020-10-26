@@ -13,7 +13,7 @@ export const Layout: React.FunctionComponent = ({ children }) => {
   );
   const size = useWindowSize();
 
-  const handleClickHamburher = () => {
+  const handleClickHamburger = () => {
     setIsOpenSidebarMobile(!isOpenSidebarMobile);
   };
 
@@ -21,12 +21,12 @@ export const Layout: React.FunctionComponent = ({ children }) => {
     <>
       <div className="flex h-screen bg-gray-50">
         {size.width <= 768 ? (
-          isOpenSidebarMobile && <SidebarMobile />
+          <SidebarMobile isOpenSidebar={isOpenSidebarMobile} closeSidebar={() => setIsOpenSidebarMobile(false)}/>
         ) : (
           <SidebarDesktop />
         )}
         <div className="flex flex-col flex-1 w-full">
-          <Header onClickHamburguer={handleClickHamburher} />
+          <Header onClickHamburguer={handleClickHamburger} />
           <main className="h-full pb-16 overflow-y-auto">
             <div className="container grid px-6 mx-auto">{children}</div>
           </main>
